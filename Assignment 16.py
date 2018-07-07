@@ -33,12 +33,12 @@ a=sqlite3.connect("test8.db")
 #     Last_Name        CHAR(50)             NOT NULL)''')
 # print("Table create successfullly")
 
-# a.execute("INSERT INTO Books(Book_ID,Title_ID,Location,Genre) VALUES(1,1,'Delhi','madhav')")
+# a.execute("INSERT INTO Books(Book_ID,Title_ID,Location,Genre) VALUES(1,1,'Delhi','nikhil')")
 # a.execute("INSERT INTO Titles(Titles_ID,Title,ISBN,Publisher_ID,Publication_Year) VALUES('1','Project','978-3-16-148410-0',123,'2018')")
-# a.execute("INSERT INTO Publishers(Publishers_ID, Name,Street_Address,Zip_Code_ID) VALUES('madhavahuja2@gmail.com','Madhav Ahuja','Delhi',110012)")
+# a.execute("INSERT INTO Publishers(Publishers_ID, Name,Street_Address,Zip_Code_ID) VALUES('nikhil.cool2571@gmail.com','Nikhil Sharma','Delhi',110012)")
 # a.execute("INSERT INTO Zip_Codes(Zip_Codes_ID,City,State,Zip_Code) VALUES('110012','Chandigarh','Delhi','123')")
 # a.execute("INSERT INTO Authors_Titles(Author_Title_ID ,Author_ID ,Title_ID) VALUES(1,2,3)")
-# a.execute("INSERT INTO Authors(Authors_ID,First_Name,Middle_Name,Last_Name) VALUES('1','Mr','Madhav','Adhuja')")
+# a.execute("INSERT INTO Authors(Authors_ID,First_Name,Middle_Name,Last_Name) VALUES('1','Mr','Nikhil','Sharma')")
 # a.commit()
 #print("Values inserted successfully")
 
@@ -62,8 +62,8 @@ g=a.execute("SELECT Authors_ID,First_Name,Middle_Name,Last_Name from Authors")
 for G in g:
     print("Authors_ID:%s\t,First_Name:%s\t,Middle_Name:%s\t,Last_Name:%s"%(G[0],G[1],G[2],G[3]))
 
-a.execute("UPDATE Books set Title_ID=2 where Genre='madhav'")
-a.execute("UPDATE Authors set Authors_ID=2 where Middle_Name='Madhav'")
+a.execute("UPDATE Books set Title_ID=2 where Genre='nikhil'")
+a.execute("UPDATE Authors set Authors_ID=2 where Middle_Name='Nikhil'")
 a.commit()
 
 print("AFTER UPDATION")
